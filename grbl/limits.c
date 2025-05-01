@@ -344,7 +344,8 @@ void limits_go_home(uint8_t cycle_mask)
                 #endif
               }
             }
-            sys.homing_axis_lock[idx] = axislock[idx];
+            //Update to support homing in Core XY
+            sys.homing_axis_lock[idx] = 73; //sys.homing_axis_lock[idx] = axislock[idx];
           }
         }
 
